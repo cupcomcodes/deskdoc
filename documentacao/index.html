@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Boas prátias - DEsk360</title>
+    <title>Boas prátias - Desk360</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -21,7 +21,7 @@
                             Introdução
                         </a>
                     </li>
-                        <li>
+                    <li>
                         <a class="nav-link" href="#botoes" rel="internal">
                             Botões
                         </a>
@@ -41,12 +41,45 @@
                             Modal
                         </a>
                     </li>
+                      <li>
+                        <a class="nav-link" href="#dropdow" rel="internal">
+                            Dropdown
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#cards" rel="internal">
+                            Cards
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#header" rel="internal">
+                           Header
+                        </a>
+                    </li>
+                       <li>
+                        <a class="nav-link" href="#sidebar" rel="internal">
+                           Sidebar
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#tabelas" rel="internal">
+                           Tabelas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#filtros" rel="internal">
+                           Filtros/Formularios
+                        </a>
+                    </li>
                 </ul>
 
             </nav>
         </div>
 
-        <div class="col-md-10 col-sm-12 col-xs-12">
+        <div class="content-doc col-md-10 col-sm-12 col-xs-12">
             <main id="main-doc" class="container-fluid">
                 <section class="main-section" id="introducao">
                     <header><h1 class="mb-0">Introdução</h1></header>
@@ -55,9 +88,13 @@
 
                         <p>Documento deve ser seguido por todas as áreas de desenvolvimento, incluindo área de produto que deve ter total conhecimento sobre as boas praticas a ser seguida na ferramenta.</p>
 
-                        <p>Framework usado no desenvolvimento: <a target="_blank" href="https://bootstrap-vue.org/">https://bootstrap-vue.org/</a></p>
-                        <p>Banco de ícones utilizados no sistema: <a target="_blank" href="https://material.io/resources/icons/?style=baseline">https://material.io/resources/icons/</a></p>
-                        <p>Framework utilizado nos calendários de período: <a target="_blank" href="https://flatpickr.js.org/">https://flatpickr.js.org/</a></p>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <a target="_blank" href="https://bootstrap-vue.org/"><img data-toggle="tooltip" data-placement="top" title="Bootstrap Vue" src="img/logo-bt-vue.png" class="logo-fm img-fluid"></a>
+                        <a target="_blank" href="https://material.io/resources/icons/?style=baseline"><img data-toggle="tooltip" data-placement="top" title="Material icons" src="img/material.jpg" class="logo-fm img-fluid"></a>
+                        </div>
+
+                        
+                 
             
                     </artice>
                 </section>
@@ -78,7 +115,9 @@
                                     <p class="border"><img src="img/add-btn.png" class="img-fluid"></p>
                                     </li>
                                     <li>
-                                    <code>&lt;b-button variant=&quot;info&quot;&gt;Bot&atilde;o prim&aacute;rio&lt;/b-button&gt;</code>
+                                        <pre class="brush: html">
+                                            <b-button variant="info">Botão primário</b-button>
+                                        </pre>
                                     </li>
                                 </ul>
                             </li>
@@ -95,7 +134,9 @@
                                     </li>
 
                                      <li>
-                                    <code>&lt;b-button variant=&quot;light&quot;&gt;Bot&atilde;o secund&aacute;rio&lt;/b-button&gt;</code>
+                                        <pre class="brush: html">
+                                            <b-button variant="light">Botão secundário</b-button>
+                                        </pre>
                                     </li>
                                 </ul>
                             </li>
@@ -123,7 +164,14 @@
                                             <p>O btn-group deve ser usado apenas em páginas onde o botão possui mais de uma ação.</p>
                                         </li>
                                         <li>
-                                            <code>&lt;div class=&quot;footer&quot;&gt; <br> &lt;b-button variant=&quot;dark&quot; class=&quot;d-flex align-content-center&quot;&gt;&lt;i class=&quot;material-icons mr-2&quot;&gt; save &lt;/i&gt;Salvar edi&ccedil;&atilde;o&lt;/b-button&gt;<br>&lt;/div&gt;</code>
+                                            <pre class="brush: html">
+                                                <div class="footer"> 
+                                                     <b-button variant="dark" class="d-flex align-content-center">
+                                                        <i class="material-icons mr-2"> save </i>Salvar edição
+                                                    </b-button>
+                                                </div>  
+                                            </pre>
+                                          
                                         </li>
                                     </ul>
                                 </li>
@@ -138,7 +186,9 @@
                                     <p class="border"><img src="img/btn-encerrar.png" class="img-fluid"></p>
                                     </li>
                                     <li>
-                                    <code>&lt;button class=&quot;btn btn-outline-danger&quot;&gt;Encerrar atendimento&lt;/button&gt;</code>
+                                        <pre class="brush: html">
+                                            <b-button class="btn btn-outline-danger">Encerrar atendimento</b-button>
+                                        </pre>
                                     </li>
                                 </ul>
                             </li>
@@ -1096,8 +1146,10 @@
                             </button>
                         </div>
                         <div>
-                            <b>Exemplo de uso:</b>
-                            <code>&lt;span class=&quot;material-icons&quot;&gt;web&lt;/span&gt;</code>
+                            <b>Código</b>
+                            <pre class="brush: html">
+                                <i class="material-icons">zoom_out_map</i>
+                            </pre>
 
                             <p><b>Regras de uso</b></p>
                             <p>Todos os ícones devem ser usados alinhados ao centro do botão.</p>
@@ -1123,7 +1175,15 @@
                         <p><button class="btn btn-info d-flex" data-toggle="tooltip" data-placement="top" title="Relógio"><i class="material-icons">access_time</i></button></p>
             
                         <p><b>Código:</b></p>
-                        <code>&lt;b-button v-b-tooltip.hover title="rel&oacute;gio" &gt;&lt;i class=&quot;material-icons&quot;&gt;access_time&lt;/i&gt;&lt;/b-button&gt;</code>
+
+                        <pre class="brush: html">
+                            <div>
+                               <b-button v-b-tooltip.hover title="Relógio">
+                                    <i class="material-icons">access_time</i>
+                                </b-button>
+                            </div>
+                        </pre>
+                        
                         <p>Mais conteúdo sobre tooltip <a target="_blank" href="https://bootstrap-vue.org/docs/components/tooltip">aqui</a></p>
                     </artice>
                 </section>
@@ -1138,18 +1198,199 @@
                         <p>Todas as modais devem abrir ao centro da tela usando o atributo <code>centered</code></p>
 
                         <p>Todas as modais devem seguir o modelo de botões abaixo com o mesmo espaçamento entre os botões</p>
-                        <p><img src="img/modal-buttons.png"></p>
+                        <p><img src="img/modal-buttons.png" class="img-fluid"></p>
 
                         <p>Todas as modais devem conter no canto superior direito o botão de fechar</p>
-                        <p><img src="img/modal-botao-fechar.png"></p>
+                        <p><img src="img/modal-botao-fechar.png" class="img-fluid"></p>
 
                         <p><b>Código padrão da modal</b></p>
-                        <code>&lt;b-modal centered title=&quot;t&iacute;tulo da modal&quot;&gt;<br>
-&lt;p&gt;conte&uacute;do da modal&lt;/p&gt;<br>
-&lt;/b-modal&gt;</code>
+                       
+                       <div>
+                        <pre class="brush: html">
+                            <div>
+                              <b-modal id="modal" title="Título da modal">
+                                <p>Conteúdo da modal</p>
+                              </b-modal>
+                            </div>
+                        </pre>
+                       </div>
 
 <p>Mais opções sobre modal <a href="https://bootstrap-vue.org/docs/components/modal" target="_blank">aqui</a></p>
                     </artice>
+                </section>
+
+                <section class="main-section" id="dropdow">
+                    <header><h1 class="mb-0">Dropdown</h1></header>
+                    <article>
+                        <p>Todas as dropdown devem seguir as mesmas especificações.</p>
+
+                        <p><b>Regras</b></p>
+
+                        <p>Nenhuma dropdown do desk360 possui fundo de outra cor que não seja branco.</p>
+
+
+                        <p>Todas as dropdown possui box-shadow com o mesmo padrão de sombra para todas.</p>
+                        <p><code>box-shadow: 0 0 40px 0 rgba(82,63,105,.1)</code></p>
+                        
+
+                        <p>Todas possui a borda arrendondada, conforme o padrão do Bootstrap</p>
+                        <p><code>border-radius: .25rem;</code></p>
+
+                        <p><b>Código</b></p>
+                       <div>
+                           <pre class="brush: html">
+                            <div>
+                              <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+                                    <b-dropdown-item>First Action</b-dropdown-item>
+                                    <b-dropdown-item>Second Action</b-dropdown-item>
+                                    <b-dropdown-item>Third Action</b-dropdown-item>
+                                    <b-dropdown-divider></b-dropdown-divider>
+                                    <b-dropdown-item active>Active action</b-dropdown-item>
+                                    <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+                              </b-dropdown>
+                            </div>
+                           </pre>
+                       </div>
+<p>Mais opções sobre dropdown <a href="https://bootstrap-vue.org/docs/components/dropdown" target="_blank">aqui</a></p>
+                    </artice>
+                </section>
+
+                <section class="main-section" id="cards">
+                    <header><h1 class="mb-0">Cards</h1></header>
+                    <article>
+                        <p>Todos os cards seguem a mesmas especificações em todas as páginas</p>
+
+                        <p><b>Regras</b></p>
+
+                        <p>Todos os cards devem ter as mesmas cores de bordas.</p>
+                        <p><img src="img/borda-card.png" class="img-fluid"></p>
+
+                        <p>Todos os cards devem possuir um header com o título do card centralidado.</p>
+                        <p><img src="img/header-card.png" class="img-fluid"></p>
+
+                        <p>Todos os cards possui uma pequena animação ao passar o mouse na borda inferior e uma leve elevação.</p>
+                        <p><img src="img/animation-card.png" class="img-fluid"></p>
+                        <p>Todos os cards possui border radius de 3px.</p>
+                        <p><img src="img/radius-card.png" class="img-fluid"></p>
+
+                        <p><b>Código padrão de todos os cards</b></p>
+                        <pre class="brush: html">
+                            
+                            <b-card-group deck class="dashboard__card mb-3">
+                              <b-card class="dashboard__card-item my-3" body-class="px-0">
+                                <h6 slot="header" class="mb-0">Nome do Card</h6>
+                                <!-- conteúdo do card -->
+                              </b-card>
+                            </b-card-group>
+
+                        </pre>
+
+                    </artice>
+                </section>
+                <section class="main-section" id="header">
+                    <header><h1 class="mb-0">Header</h1></header>
+                    <article>
+                        <p>O header deve serguir todas as regras de padronização.</p>
+                        <p><img src="img/header.png" class="img-fluid"></p>
+                        <p><b>Regras</b></p>
+
+                        <p>Botão de buscar deve ser SEMPRE o primeiro botão.</p>
+                        <p><img src="img/search.png" class="img-fluid"></p>
+
+                        <p>O botão de perfil deve ser SEMPRE o último botão.</p>
+                        <p><img src="img/profile.png" class="img-fluid"></p>
+
+                        <p>Cada botão trata-se de um componente separado. eles devem seguir o mesmo modelo de código abaixo:</p>
+                        <pre class="brush: html">
+                            <template>
+                                <li class="topbar__item" v-b-tooltip.hover.bottom title="Tooltip identificador do botão">
+                                    <a href="#"><i class="material-icons">BETA</i></a>
+                                </li>
+                            </template>
+                        </pre>
+                    </artice>
+                </section>
+                <section class="main-section" id="sidebar">
+                    <header><h1 class="mb-0">Sidebar</h1></header>
+                    <article>
+                        <p>A sidebar deve serguir todas as regras de padronização.</p>
+                        <p><img src="img/sidebar.png" class="img-fluid"></p>
+                        <p><b>Regras</b></p>
+
+                        <p>O primeiro botão da sidebar SEMPRE deve ser o do dashboard.</p>
+                        <p><img src="img/dashboard.png" class="img-fluid"></p>
+
+                        <p>O segundo botão sempre deve ser o de ticket.</p>
+                        <p><img src="img/tickets.png" class="img-fluid"></p>
+
+                        <p>O último botão da sidebar SEMPRE deve ser o botão de configurações.</p>
+                        <p><img src="img/config.png" class="img-fluid"></p>
+
+                        <p>Todos os botões devem conter obrigatóriamente uma tooltip identificando o mesmo. Todos os botões devem possuir um título para a versão mobile, segue exemplo do código abaixo.</p>
+
+                        <p>Código para cada item da sidebar:</p>
+                        <pre class="brush: html">
+                            <template>    
+                                <li class="list-menu-item">
+                                    <a herf="">
+                                      <i class="material-icons">chat</i>
+                                      <!-- título da versão mobile -->
+                                      <span class="title-mobile">título da versão mobile</span>
+                                    </a>
+                                </li>
+                            </template>
+                        </pre>
+                    </artice>
+                </section>
+                 <section class="main-section" id="tabelas">
+                    <header><h1 class="mb-0">Tabelas</h1></header>
+                    <article>
+                        <p>Todas as tabelas devem seguir as mesmas regras de padronização.</p>
+                        <p><b>Regras</b></p>
+
+                        <p>Todas as tabelas devem possui o mesmo hover.</p>
+
+                        <p>Todas as tebelas que contenham ícones devem ter os ícones nos mesmos tamanho e cores.</p>
+
+                        <p>Todas as tabelas devem ter páginação, quantidade de itens listados e registros encontrados.</p>
+
+                        <p>Para que as tabelas sigam o mesmo padrão existem algumas classes a serem adicionadas, segue exemplo abaixo.</p>
+
+                        <p>Código:</p>
+                        <pre class="brush: html">
+                            <div class="table-hover-desk table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="items-table-row"></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </pre>
+                    </artice>
+                </section>
+                 <section class="main-section" id="filtros">
+                    <header><h1 class="mb-0">Filtros e formulários</h1></header>
+                    <article>
+                        <p>Todos os filtros e formulários possuem classes e regras especificas.</p>
+                        
+                        <p><b>Regras Formulário</b></p>
+
+                        <p>Toda label e input e small(help) devem ser envolvidos por uma classe: <code>.form_create</code></p>
+
+                        <p>Toda label deve ter o mesmo tamanho de fonte.</p>
+                        <p>Todo input deve ter o mesmo background e borda.</p>
+                        <p>Todo input deve ter o mesmo focus ao passar o mouse.</p>
+                        
+                        <p><b>Regras Formulário</b></p>
+                        <p>Toda label e input e small(help) devem ser envolvidos por uma classe: <code>.line-filter-name</code></p>
+                        <p>Toda label deve ter o mesmo tamanho de fonte.</p>
+                        <p>Todo input deve ter o mesmo background e borda.</p>
+                        <p>Todo input deve ter o mesmo focus ao passar o mouse.</p>
+
+                        </artice>
                 </section>
             </main>
         </div>
@@ -1158,6 +1399,13 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- DC Syntax Highligher JS -->
+<script type="text/javascript" src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<!-- DC Syntax Highligher Brushes -->
+<script src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shBrushXml.js" type='text/javascript'></script>
+<script src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shBrushJScript.js" type='text/javascript'></script>
+<script src="http://cdn.dcodes.net/2/syntaxhighlighter/scripts/shBrushCss.js" type='text/javascript'></script>
 <script>
 $(function() { 
   $('.expand-button').click(function() {
@@ -1168,7 +1416,7 @@ $(function() {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
-
+SyntaxHighlighter.all();
 </script>
 </body>
 </html>
